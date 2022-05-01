@@ -98,6 +98,7 @@ class Laberinto():
                 coordenada_actual = casillas_libres[0]
                 camino_recorrido.append(coordenada_actual)
 
+            # En caso de múltiples casillas, guardamos el punto de decision y avanzamos para volver en caso de error
             elif len(casillas_libres) > 1:
 
                 puntos_multi_camino.append((coordenada_actual, len(instrucciones)))
@@ -106,6 +107,7 @@ class Laberinto():
                 coordenada_actual = casillas_libres[0]
                 camino_recorrido.append(coordenada_actual)
 
+            # En caso de no encontrar salida, volvemos al punto de decision anterior
             elif len(casillas_libres) == 0:
                 try:
     
