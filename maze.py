@@ -1,6 +1,3 @@
-from queue import Empty
-
-
 class Maze():
     def __init__(self, dimension, wall, start=(0,0), ending=None):
         self.dimension = dimension
